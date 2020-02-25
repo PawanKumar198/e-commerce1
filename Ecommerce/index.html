@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+ <html>
+ 	 <head>
+ 	 	 <meta charset="utf-8">
+ 	 	 <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+ 	 	 <meta content='e-commerce' author='udaninstitute'>
+ 	 	 <meta name='description' content=''>
+ 	 	 <meta content='https://www.udaninstitute.com' property='og:url'>
+ 	 	 <meta content='website' propery='og:type'>
+ 	 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"> 
+ 	 	 <link rel='stylesheet' href='css/animate.css'>
+ 	 	 <link rel='stylesheet' href='css/bootstrap.min.css'>
+ 	 	 <link rel='stylesheet' href='css/mdb.min.css'>
+         <link rel='stylesheet' href='css/hover.css'>
+ 	 	 <link rel='stylesheet' href='css/side.css'>
+ 	 	 <link rel='stylesheet' href='css/dropBox.css'>
+ 	 	 <link rel='stylesheet' href='css/cookie.css'>
+ 	 	 
+ 	 	 <title>Udan E-commerce </title>
+
+ 	 	 <style>
+
+
+ 	 	 	.cookies{
+             background: black;
+             position: fixed;
+              width:100%;
+              bottom: 0;              
+              left:0;
+              display: none;
+              transition: all 3s ease-in-out; 
+
+}
+ 	 	   	.toggle-btn{
+                display: block;
+                position: absolute;
+                 top: 15px;
+                 left: 5px;
+                 right: 5px;
+                 height: 9px;
+                
+ 	 	 	}
+ 	 	 	.toggle-btn:before,.toggle-btn:after{
+               content: '';
+               display:block;
+               position:absolute;
+               top:0;
+               height:3px;
+               width:100%;
+               background: red;
+               
+ 	 	 	}
+ 	 	 	.toggle-btn:before{
+                position: absolute;
+                transform:rotate(45deg);
+ 	 	 	}
+ 	 	 	.toggle-btn:after{
+ 	 	 		position: absolute;
+                transform:rotate(-45deg);
+ 	 	 	}
+        .card{
+            height:100%;
+        }
+      .view ,.view img{
+        	height:35vh;
+        }
+
+     .light-list > li > ul> a{
+           color:black;
+     }
+     .search{
+        border-left:1px solid gray;
+     }
+
+    #search{
+        display:flex;
+        position: relative;
+    }
+    #search input{
+       outline: none;
+       border:none;
+      box-shadow: none;
+    }
+    #search{display: none;}
+    .ecommerce_heading.active{display: none;}
+    #search.active{
+        display: flex;
+    }
+    .register{color:#fff;transition:all ease  0.25s;}
+    .register:hover{
+       color:orange;
+       cursor: pointer;
+    }
+    
+    .modal-header{
+        position: absolute;
+        top:-70px;
+        left:50px;
+        width:40%;
+        height:auto;
+    }
+    .modal-content{
+        position: relative;
+        height:50vh;
+    }
+    .modal-dialog{
+       top:20%;
+    }
+    
+    .modal-header img{
+        width: 100%;
+        height:100%;
+        margin:20px;
+    }
+
+ 	 	 </style>
+            
+
+    
+
+ 	 </head>
+ 	 <body>
+ 	 	
+  <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <span class='toggle-btn'></span>
+            </div>
+
+            <div class="sidebar-header">
+               <h3>English</h3>
+            </div>
+
+            <ul  class=" sidebar-list list-unstyled ">
+                <p>Register/Login</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Winners</a>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Nominess</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Collections</a>
+                </li>
+                <li >
+                    <a href="#" class='mr-4'>Professional</a>
+                    <span class='badge badge-warning  '>4</span>
+                </li>
+                 <li >
+                    <a href="#" class='mr-4'>Jobs/Talents</a>
+                    <span class='badge badge-success '>1</span>
+                </li>
+                <li>
+                    <a href="#">Blogs</a>
+                </li>
+                <li>
+                    <a href="#">eBooks & Publications</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="#">Conferences</a>
+                    <div class='font-italic grey-text small'>
+                     <i class="first-top">New York City / 26-27 Sep 2019</i>
+                    <i>Tokyo / 23-24 Jan 2020</i>
+                      </div>
+                     </li>
+            </ul>
+
+            
+        </nav>
+
+        <!-- Page Content  -->
+      <div id="content">
+              
+        <div style='background: radial-gradient(navy,black)' class='row '>
+   
+           <div class='col-1 p-3 '>  
+
+            <div class='bar '>
+               <i class="fas fa-bars  text-white"></i>
+            </div>
+
+          </div>
+
+           <div class='col-2 p-3  '>  
+
+           <div class='mr-auto search text-left'>
+                <i id="search_btn" class="fas fa-search text-white px-3 "></i>
+               </div>
+
+           </div>
+
+          <div class='col-md-4 col-8   text-right d-flex justify-content-center align-items-center'>
+          	   
+
+                <h2 class='text-white ecommerce_heading'>Ecommerce</h2>
+                <form class="w-100 " id="search">
+                     <input class="form-control" placeholder="search.." id="search_id" type='text' name="search">
+                     <span id="cross" class="search_cross d-flex justify-content-center align-items-center w-25"><i class="fas fa-times text-white "></i></span>
+                </form>
+                   </div>
+
+               <div class='col-5  d-none   d-md-flex justify-content-end align-items-center'>
+               	<span class='text-uppercase mx-2 font-weight-bold register'>Register / log in</span>
+                <a href='' target='' class=' text-white p-3'>
+                	  SUBMIT YOUR SITE  
+                </a>
+              </div>
+
+       
+
+          
+         
+        </div>   
+            <!-- content end -->
+
+        <header>
+        	 <nav class='navbar navbar-expand-lg d-none d-lg-block'>
+        	 	<div class='container-fluid'>
+
+        	 		 <a href='' class='navbar-brand'><i class="fas fa-filter"></i></a>
+        	 		 <ul class='light-list navbar-nav mr-auto animenu__nav  '>
+        	 		 	<li class='nav-item mx-1'>
+        	 		 	<a href='' class='nav-link'> Filter By </a>
+        	 		   </li>
+        	 		   <li class='nav-item mx-1'>
+        	 		   	<a href='' class='nav-link'> Awards <i class="fas fa-sort-down ml-1 text-center"></i> </a>
+
+        	 		   	  <ul class='animenu__nav__dropdown rounded p-4' style="list-style: none" >
+                         
+                         <div class='row '>
+
+                         	 <div class="col-12 my-4">Order → <span class="active js-tag-alphabetical">Alphabetical</span> <span class="js-tag-popular">Popular</span></div>
+
+                         	 <div class='col-12 '>
+                         	 	 <a href='' target='' class='btn btn-outline-light' data-count="234">Sites of the Day</a>
+                         	 	 <a href='' target='' class='btn btn-outline-light mx-1'>Sites of the Month</a>
+                         	 	 <a href='' target='' class='btn btn-outline-light mx-1 '>Sites of the Year</a>
+                         	 	 <a href='' target='' class='btn btn-outline-light mx-1'>Developer</a>
+                         	 	 <a href='' target='' class='btn btn-outline-light mx-1'>Mobile Excellence</a>
+                         	 	 <a href='' target='' class='btn btn-outline-light mx-1'>Honorable</a>
+                         	 	 <a href='' target='' class='btn btn-outline-light mx-1'>Nominees</a>
+                         	 </div>
+                         </div>
+        	 		      
+
+        	 		   	  </ul>
+        	 		   </li>
+        	 		   <li class='nav-item'>
+        	 		   	 <a href='' class='nav-link'>E-commerce <i class="fas fa-sort-down ml-1 text-center"></i></a>
+        	 		   	 <ul class='animenu__nav__dropdown rounded' style='list-style: none' >
+        	 		   	 	<div class='row'>
+
+        	 		   	 		 <div class="col-12 my-4">Order → <span class="active js-tag-alphabetical">Alphabetical</span> <span class="js-tag-popular">Popular</span></div>
+
+        	 		   	 		<div class='col-12 py-4'>
+             <a href='' target='' class='btn btn-outline-light' data-count="234">E-Commerce</a>
+          	 <a href='' target='' class='btn btn-outline-light mx-1'>Architecture</a>
+             <a href='' target='' class='btn btn-outline-light mx-1 '>Art &amp; Illustration</a>
+             <a href='' target='' class='btn btn-outline-light mx-1'>Business &amp; Corporate</a>
+             <a href='' target='' class='btn btn-outline-light mx-1'>Culture &amp; Education</a>
+             <a href='' target='' class='btn btn-outline-light mx-1'>Design Agencies</a>
+             <a href='' target='' class='btn btn-outline-light mx-1'>Events</a>
+
+    <a class='btn btn-outline-light mx-1' href="/websites/experimental/" data-count="390">Experimental
+    </a>
+                                            
+    <a class='btn btn-outline-light mx-1' href="/websites/fashion/" data-count="1046">Fashion</a>
+    <a class='btn btn-outline-light mx-1' href="/websites/film-tv/" data-count="729">Film &amp; TV</a>
+   <a class='btn btn-outline-light mx-1' href="/websites/food-drink/" data-count="905">Food &amp; Drink</a>                                       
+    <a class='btn btn-outline-light mx-1' href="/websites/games-entertainment/" data-count="603">Games &amp; Entertainment</a>
+               
+                                            
+   <a class='btn btn-outline-light mx-1' href="/websites/hotel-restaurant/" data-count="372">Hotel / Restaurant</a>
+                                            
+     <a class='btn btn-outline-light mx-1' href="/websites/institutions/" data-count="302">Institutions</a>
+                                           
+    <a class='btn btn-outline-light mx-1' href="/websites/magazine-newspaper-blog/" data-count="255">Magazine / Newspaper / Blog</a>
+                                           
+    <a class='btn btn-outline-light mx-1' href="/websites/mobile-apps/" data-count="730">Mobile &amp; Apps</a>
+               
+    <a class='btn btn-outline-light mx-1' href="/websites/music-sound/" data-count="624">Music &amp; Sound</a>
+                                          
+     <a class='btn btn-outline-light mx-1' href="/websites/other/" data-count="802">Other</a>
+               
+     <a class='btn btn-outline-light mx-1' href="/websites/photography/" data-count="208">Photography</a>
+                                           
+    <a class='btn btn-outline-light mx-1' href="/websites/promotional/" data-count="1496">Promotional</a> 
+                                            
+    <a class='btn btn-outline-light mx-1' href="/websites/real-estate/" data-count="143">Real Estate</a>
+                                           
+    <a class='btn btn-outline-light mx-1' href="/websites/sports/" data-count="487">Sports</a>
+               
+                                          
+ <a class='btn btn-outline-light mx-1' href="/websites/startups/" data-count="161">Startups</a>          <a class='btn btn-outline-light mx-1' href="/websites/technology/" data-count="1272">Technology</a>
+  <a class='btn btn-outline-light mx-1' href="/websites/web-interactive/" data-count="4701">Web &amp; Interactive</a>
+
+        	 		   	 		</div>
+        	 		   	 	</div>
+        	 		   	 </ul>
+        	 		   </li>
+        	 		   <li class='nav-item'  data-order="count">
+
+        	 		   	 <a href='' class='nav-link d'>Tags <i class="fas fa-sort-down ml-1 text-center"></i></a>
+         <!--  -->
+      
+
+               <ul class=" animenu__nav__dropdown p-4" data-count="53">
+
+               	 <div class='row'>
+
+                       <div class="col-12 my-4">Order → <span class="active js-tag-alphabetical">Alphabetical</span> <span class="js-tag-popular">Popular</span></div>
+
+                  	   <div class='col-12 my-1 drop_list'>
+                                            
+                    <a class='btn btn-outline-light mx-1 ' href="/websites/?category=e-commerce&amp;tag=360" data-count="8">360</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=3d" data-count="25">3D</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=404-pages" data-count="4">404 pages</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=about-page" data-count="5">About Page</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=animation" data-count="285">Animation</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=app-style" data-count="18">App Style</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=big-background-images" data-count="232">Big Background Images</a>
+                   <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=clean" data-count="562">Clean</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=colorful" data-count="146">Colorful</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=contact-page" data-count="1">Contact Page</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=content-architecture" data-count="10">Content architecture</a>
+              
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=copy-design" data-count="4">Copy design</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=data-visualization" data-count="3">Data Visualization</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=filters-and-effects" data-count="18">Filters and Effects</a>
+                   <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=flat-design" data-count="137">Flat Design</a>
+                   <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=footer-design" data-count="4">Footer Design</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=forms-and-input" data-count="8">Forms and Input</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=fullscreen" data-count="153">Fullscreen</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=gallery" data-count="21">Gallery</a>
+                    <a class='btn btn-outline-light mx-1' href="/websites/?category=e-commerce&amp;tag=gestures-interaction" data-count="22">Gestures / Interaction</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=graphic-design  " data-count="112">Graphic design</a>
+                   <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=header-design" data-count="6">Header Design</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=horizontal-layout" data-count="21">Horizontal Layout</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=icons" data-count="33">Icons</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=illustration" data-count="9">Illustration</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=infinite-scroll" data-count="21">Infinite Scroll</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=interaction-design" data-count="31">Interaction Design</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=menu-horizontal" data-count="12">Menu - Horizontal</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=menu-vertical" data-count="15">Menu - Vertical</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=microinteractions" data-count="13">Microinteractions</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=minimal" data-count="224">Minimal</a>
+                   <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=navigation" data-count="60">Navigation Menu</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=parallax" data-count="151">Parallax</a>
+                   <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=photo-video" data-count="27">Photo &amp; Video</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=photography-sites" data-count="152">Photography</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=portfolio" data-count="36">Portfolio</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=project-page" data-count="3">Project Page</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=responsive" data-count="82">Responsive</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=responsive-design" data-count="496">Responsive Design</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=retro" data-count="16">Retro</a>
+                    <a class='btn btn-outline-light mx-1 hidden'  href="/websites/?category=e-commerce&amp;tag=seo-1" data-count="19">SEO</a>
+                   <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=scrolling" data-count="77">Scrolling</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=single-page" data-count="66">Single page</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=social-integration" data-count="15">Social Integration</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=sound-audio" data-count="6">Sound-Audio</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=storytelling" data-count="50">Storytelling</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=transitions" data-count="61">Transitions</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=typography" data-count="118">Typography</a>
+                   <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=ui-design" data-count="71">UI design</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=unusual-navigation" data-count="45">Unusual Navigation</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=vector" data-count="7">Vector</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=video" data-count="94">Video</a>
+                    <a class='btn btn-outline-light mx-1 hidden' href="/websites/?category=e-commerce&amp;tag=web-fonts" data-count="30">Web Fonts</a>
+
+                     <span  class='showMore m-4 font-italic'>Show More....</span>
+
+                               </div>
+          </div>
+
+                        </ul>
+                   
+          <!--  -->
+
+        	 		   </li>
+        	 		   <li class='nav-item'  data-order="count">
+        	 		    	 <a href='' class='nav-link'>Technologies <i class="fas fa-sort-down ml-1 text-center"></i> </a>
+
+
+                    <!-- technologies submenu -->
+
+                         
+                             <ul class="list-tags animenu__nav__dropdown p-4" data-count="63">
+                             	<div class='row'>
+
+                            <div class="col-12 my-4">Order → <span class="active js-tag-alphabetical">Alphabetical</span> <span class="js-tag-popular">Popular</span></div>
+
+                            <div class='col-12 drop_list'>	
+                                  
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=angularjs" data-count="20">AngularJS</a>
+                
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=apache" data-count="33">Apache</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=barba-js" data-count="4">BARBA.js</a>
+               
+                   <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=backbone-js" data-count="13">Backbone.js</a>
+                
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=bootstrap" data-count="33">Bootstrap</a>
+                
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=css-framework" data-count="35">CSS Framework</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=css3" data-count="328">CSS3</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=cloudflare" data-count="19">CloudFlare</a>
+                
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=craft-cms" data-count="7">Craft CMS</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=createjs" data-count="2">CreateJS</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=debian" data-count="5">Debian</a>
+              
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=demandware" data-count="6">Demandware</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=drupal" data-count="22">Drupal</a>
+              
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=express" data-count="2">Express</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=facebook-api" data-count="7">Facebook API</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=fastclick" data-count="5">FastClick</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=font-awesome" data-count="11">Font Awesome</a>
+              
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=glsl" data-count="4">GLSL</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=gsap-animation" data-count="94">GSAP Animation</a>
+               
+                    <a class="btn btn-outline-light mx-1" href="/websites/?category=e-commerce&amp;technology=google-app-engine" data-count="1">Google App Engine</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=google-font-api" data-count="27">Google Font API</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=html5" data-count="338">HTML5</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=hammer-js" data-count="6">Hammer.JS</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=handlebars" data-count="6">Handlebars</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=iis" data-count="7">IIS</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=ink" data-count="1">Ink</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=laravel" data-count="9">Laravel</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=lo-dash" data-count="14">Lo-dash</a>
+              
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=magento" data-count="25">Magento</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=mediaelement-js" data-count="1">MediaElement.js</a>
+              
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=microsoft-asp-net" data-count="7">Microsoft ASP.NET</a>
+              
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=modernizr" data-count="44">Modernizr</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=nginx" data-count="47">Nginx</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=node-js" data-count="13">Node.js</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=owl-carousel" data-count="6">OWL Carousel</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=php" data-count="119">PHP</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=pixijs" data-count="16">PixiJS</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=reactjsdah" data-count="26">ReactJS﻿</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=requirejs" data-count="15">RequireJS</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=ruby" data-count="11">Ruby</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=svg" data-count="82">SVG</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=shopify" data-count="117">Shopify</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=skrollr-js" data-count="4">Skrollr.js</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=snap-svg" data-count="1">Snap.svg</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=three-js" data-count="16">Three.js</a>
+                
+                   <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=typekit" data-count="15">Typekit</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=ubuntu" data-count="5">Ubuntu</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=underscore-js" data-count="8">Underscore.js</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=varnish" data-count="11">Varnish</a>
+                
+                     <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=velocity-js" data-count="3">Velocity.js</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=vue-js" data-count="20">Vue.js</a>
+                
+                   <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=webgl" data-count="37">WebGL</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=websockets" data-count="1">WebSockets</a>
+                
+                   <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=webpack" data-count="27">Webpack</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=woocommerce" data-count="87">WooCommerce</a>
+               
+                   <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=wordpress" data-count="260">Wordpress</a>
+               
+                   <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=yepnope" data-count="9">Yepnope</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=youtube-api" data-count="2">YouTube API</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=zepto" data-count="2">Zepto</a>
+                
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=jquery" data-count="220">jQuery</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=jquery-mobile" data-count="3">jQuery Mobile</a>
+               
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=jquery-ui" data-count="13">jQuery UI</a>
+               
+                                            
+                    <a class="btn btn-outline-light mx-1 hidden" href="/websites/?category=e-commerce&amp;technology=tween-js" data-count="4">tween.js</a>
+
+                   <span  class='showMore m-4 font-italic'>Show More....</span>
+               
+               </div>
+           </div>
+
+                        </ul>
+
+
+                    <!-- technologies submenu end -->
+
+
+
+
+        	 		   </li>
+        	 		   <li class='nav-item mx-2'  data-order="count">
+        	 		   	 <a href='' class='nav-link'>Colors</a>
+
+
+                                <ul class="animenu__nav__dropdown p-4" data-count="10">
+                                	<div class='row'>
+
+                        <div class="col-12 my-4">Order → <span class="active js-tag-alphabetical">Alphabetical</span> <span class="js-tag-popular">Popular</span></div>
+
+                                		<div class='col-12'>
+                                           
+                 <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=black" data-count="629">Black</a>
+               
+                 <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=blue" data-count="206">Blue</a>
+               
+                    <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=brown" data-count="94">Brown</a>
+               
+                   <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=green" data-count="182">Green</a>
+               
+                   <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=orange" data-count="86">Orange</a>
+               
+                    <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=pink" data-count="102">Pink</a>
+               
+                  <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=red" data-count="159">Red</a>
+                
+                  <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=silver" data-count="324">Silver</a>
+                
+                   <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=white" data-count="819">White</a>
+               
+                  <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;color=yellow" data-count="187">Yellow</a>
+               
+               </div>
+           </div>
+
+                        </ul>
+
+
+        	 		   </li>
+        	 		   <li class='nav-item mx-2'  data-order="count">
+        	 		   	 <a href='' class='nav-link'>Countries <i class="fas fa-sort-down ml-1 text-center"></i> </a>
+
+                  
+                   <ul class="animenu__nav__dropdown p-4" data-count="60">
+
+                   	<div class='row'>
+
+                   
+                    <div class="col-12 my-4">Order → <span class="active js-tag-alphabetical">Alphabetical</span> <span class="js-tag-popular">Popular</span></div>
+
+                   		<div class='col-12 drop_list'>
+                                           
+                 <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=United%20States" data-count="273">United States</a>  
+               
+                 <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=United%20Kingdom" data-count="147">United Kingdom</a>  
+               
+               <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=France" data-count="92">France</a>  
+               
+                   <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Netherlands" data-count="83">Netherlands</a>  
+               
+                  <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Italy" data-count="54">Italy</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Canada" data-count="47">Canada</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Denmark" data-count="44">Denmark</a>  
+                
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Germany" data-count="44">Germany</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Australia" data-count="37">Australia</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Russia" data-count="29">Russia</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Poland" data-count="23">Poland</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Switzerland" data-count="22">Switzerland</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Sweden" data-count="20">Sweden</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Spain" data-count="16">Spain</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Ukraine" data-count="16">Ukraine</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=New%20Zealand" data-count="13">New Zealand</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Austria" data-count="13">Austria</a>  
+                
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Portugal" data-count="12">Portugal</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Czech%20Republic" data-count="11">Czech Republic</a>  
+               
+                      <a class="btn btn-outline-light mx-2" href="/websites/?category=e-commerce&amp;country=Belgium" data-count="11">Belgium</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Brazil" data-count="10">Brazil</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=South%20Africa" data-count="8">South Africa</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Israel" data-count="7">Israel</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Turkey" data-count="7">Turkey</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Japan" data-count="7">Japan</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Serbia" data-count="6">Serbia</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Lithuania" data-count="5">Lithuania</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Argentina" data-count="5">Argentina</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Greece" data-count="5">Greece</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Singapore" data-count="4">Singapore</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Estonia" data-count="4">Estonia</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Bulgaria" data-count="4">Bulgaria</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=India" data-count="4">India</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Croatia" data-count="4">Croatia</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Norway" data-count="4">Norway</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Slovakia" data-count="4">Slovakia</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=United%20Arab%20Emirates" data-count="3">United Arab Emirates</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Romania" data-count="3">Romania</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Georgia" data-count="3">Georgia</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Taiwan" data-count="2">Taiwan</a>  
+              
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Colombia" data-count="2">Colombia</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=South%20Korea" data-count="2">South Korea</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Slovenia" data-count="2">Slovenia</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Vietnam" data-count="2">Vietnam</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Hong%20Kong%20-%20Macau" data-count="2">Hong Kong - Macau</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Iran" data-count="1">Iran</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Philippines" data-count="1">Philippines</a>  
+              
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Egypt" data-count="1">Egypt</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Nigeria" data-count="1">Nigeria</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Hungary" data-count="1">Hungary</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Iceland" data-count="1">Iceland</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=China" data-count="1">China</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Malta" data-count="1">Malta</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Thailand" data-count="1">Thailand</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Chile" data-count="1">Chile</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Indonesia" data-count="1">Indonesia</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Armenia" data-count="1">Armenia</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Belarus" data-count="1">Belarus</a>  
+               
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Bahrain" data-count="1">Bahrain</a>  
+                
+                      <a class="btn btn-outline-light mx-2 hidden" href="/websites/?category=e-commerce&amp;country=Ireland" data-count="1">Ireland</a>  
+                
+                 <span  class='showMore m-4 font-italic'>Show More....</span>
+
+            </div>
+        </div>
+                        </ul>
+
+
+
+        	 		   </li>
+        	 		   <li class='nav-item'>
+        	 		   	<a href='' class='nav-link'>
+        	 		   		<i class="fas fa-sync-alt mr-1"></i>Reset Filters
+        	 		   	</a>
+        	 		   </li>
+        	 		 </ul>
+        	 	</div>
+        	 </nav>
+
+        </header>
+
+
+          <!-- end body context -->
+
+          <main class='my-4'>
+          	<div class='container-fluid'>
+          	  <section>
+          	  	 <div class='row'>
+          	  	 	 <div class='col-12'>
+          	  	 	 	 <div class='row'>
+          	  	 	 	 	 <div class='col-md-6 drop_list'>
+          	  	 	 	 	 	<p>Examples Of Well Designed E-commerce Websites </p><span  class='showMore font-italic'>Show More....</span>
+          	  	 	 	 	 	<div class='hidden ml-3'>
+          	  	 	 	 	 	<p >Here is a selection of    Awwwards winning e-commerce websites  </p>
+          	  	 	 	 	 	<p>E-commerce is the use of electronic communications and digital information processing technology in business transactions to create and redefine relationships for value creation between or among organizations, and between organizations and individuals.</p>
+          	  	 	 	 	 	<p>External Links:<a href='' target='' class='blue-text font-weight-normal font-italic hoverable'> E-commerce Concepts and definitions | Free e-commerce platform | Build an Online Store for Free</a></p>
+          	  	 	 	 	 </div>
+          	  	 	 	 	 </div>
+          	  	 	 	 	 <div class='col-md-6 text-right'>
+          	  	 	 	 	 	<p>  1133   results for '<span class='lead'>E-commerce Websites</span>'</p>
+          	  	 	 	 	 </div>
+          	  	 	 	 </div>
+          	  	 	 </div>
+
+          	  	 </div>
+          	  </section>
+
+
+             <div class='row mt-5  item-container'>
+
+    <!-- item-store -->
+
+
+              </div>
+
+
+           <section class='my-5 py-5'>
+           	  <nav class='d-flex justify-content-center'>
+           	  	  <ul class='pagination'>
+
+           	  	  	 <li class='page-item'>
+           	  	  	 	<a class='page-link' href='#' aria-label='Previous' >
+           	  	  	 		<span aria-hidden='true'>&laquo;</span>
+           	  	  	 		<span class='sr-only' >Previous</span>
+           	  	  	 	</a>
+           	  	  	 </li>
+           	  	  	 <li class='page-item'>
+           	  	  	 	<a href='' class='page-link'>1<span class='sr-only'></span></a>
+           	  	  	 </li>
+           	  	  	 <li class='page-item'>
+           	  	  	 	 <a href='' class='page-link'>2</a>
+           	  	  	 </li>
+           	  	  	 <li class='page-item'>
+           	  	  	 	 <a href='' class='page-link'>4</a>
+           	  	  	 </li>
+           	  	  	 <li class='page-item'>
+           	  	  	 	<a href='' class='page-link'>5</a>
+           	  	  	 </li>
+           	  	  	 <li class='page-item'>
+           	  	  	 	<a href='' class='page-link' aria-label="next">
+           	  	  	 		<span aria-hidden="true">&raquo;</span>
+           	  	  	 		<span class='sr-only'>Next</span>
+           	  	  	 	</a>
+           	  	  	 </li>
+           	  	  	
+           	  	  </ul>
+           	  </nav>
+           </section>
+
+      
+      <!-- cookies start -->
+
+        <div classs='container-fluid'>
+        	 <div class='cookies row bg-dark'>
+        	 	<div class='col-md-10 pt-3 '>
+        	 		<p class='text-white pl-4 ml-5'>This website uses cookies to ensure you get the best experience on our website. <span style='list-style: underline' class='blue-text'>Learn More.</span></p>
+        	 	</div>
+        	 	<div class='col-md-2 text-center'>
+        	 		<button id="cookies_btn" class='btn btn-md mt-3 btn-success rounded wow animated infinite wobble '>Got it..</button>
+        	 	</div>
+        	 </div>
+        </div>
+
+
+      <!-- cookies end -->
+
+
+
+          </main>
+
+
+          <footer class='page-footer bg-grey black-text shadow'>
+          	 <div class='container-fluid'>
+          	 	 <div class='row'>
+          	 	 	 <div class='col-md-8  my-5 '>
+          	 	 	 	<p class=''>The awards for design, creativity and innovation on the Internet</p>
+          	 	 	 	<div class='footer-list my-5 '>
+          	 	 	 		
+          	 	 	 				<a href='' target='' class='ml-4 black-text' >Directory
+                                          <span class='badge-warning p-1 badge ml-1'>5</span>
+          	 	 	 				</a>
+          	 	 	 			
+          	 	 	 				<a href='' target='' class='ml-4 black-text'>Jobs
+                                         <span class='badge-success p-1 badge ml-1'>1</span>
+          	 	 	 				</a>
+          	 	 	 			
+          	 	 	 				<a href='' target='' class='ml-4 black-text'>Contact Us</a>
+          	 	 	 			
+          	 	 	 				<a href='' target='' class='ml-4 black-text'>F.A.Q</a>
+          	 	 	 			
+          	 	 	 				<a href='' target='' class='ml-4 black-text'>Cookies Policy</a>
+          	 	 	 			
+          	 	 	 				<a href='' target='' class='ml-4 black-text'>Legal Terms</a>
+          	 	 	 			
+          	 	 	 				<a href='' target='' class='ml-4 black-text'>Privicy Policy</a>
+          	 	 	 			
+          	 	 	 	</div>
+          	 	 	 	<p class='m-5'>
+          	 	 	 		<small>Private Cloud by   Stackscale  </small>
+          	 	 	 	</p>
+          	 	 	 	<div class='my-4'>
+          	 	 	 		<a href='' target=''><i class="fas fa-camera-retro mx-2 blue-text"></i></a>
+          	 	 	 		<a href='' target=''><i class="fab fa-twitter mx-2 blue-text"></i></a>
+          	 	 	 		<a href='' target=''><i class="fab fa-facebook-f mx-2 blue-text"></i></a>
+          	 	 	 	</div>
+          	 	 	 </div>
+          	 	 	 <div class=' col-md-4 mt-md-5 '>
+          	 	 	 	<p>
+          	 	 	 		Next Conferences
+          	 	 	 		<span class='mx-1'><i class="fas fa-calendar-alt"></i></span> <strong class='mx-1'>New York   and <strong class='mx-1'>Tokyo  </p>
+          	 	 	 </div>
+          	 	 </div>
+          	 </div>
+          	 <hr class='my-4'>
+          	 <div style='background: transparent;' class="footer-copyright py-3 black-text  text-center  rounded">
+     <span class=' font-weight-normal'> © 2019 Copyright: </span>
+      <a href="https://mdbootstrap.com/education/bootstrap/" class='font-italic font-weight-normal blue-text' target="_blank"> www.udaninstitute.com </a>
+    </div>
+          </footer>
+
+    </div>
+
+
+      <div class="modal fade" id="loginModal" >
+           <div class="modal-dialog modal-sm">
+                 <div class="modal-content">
+                       <div class="modal-header">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" class="rounded-circle img-responsive"
+                        alt="Avatar photo"> 
+                       </div>
+                       <div class="modal-body">
+                         <div class="md-form my-5 ml-0 mr-0">
+                        <input type="texts" type="text" id="form1" class="form-control ml-0">
+                        <label for="form1" class="ml-0">Enter Username</label>
+                      </div>
+                      <div class="md-form my-5 ml-0 mr-0">
+                        <input type="password" type="text" id="form1" class="form-control ml-0">
+                        <label for="form1" class="ml-0">Enter password</label>
+                      </div>
+
+                      <div class="text-center my-4">
+                        <button class="btn btn-cyan">Login
+                          <i class="fas fa-sign-in-alt ml-1"></i>
+                        </button>
+                      </div> 
+                       </div>
+                 </div>
+           </div>
+      </div>
+
+   
+
+
+    <div class="body-overlay"></div>
+
+
+
+    <!-- javascript links -->
+    
+    <script type='text/javascript' src='js/jquery-3.4.1.min.js'></script>
+    <script type='text/javascript' src='js/popper.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='js/mdb.min.js'></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+    <script type='text/javascript'>
+
+        $(".register").on("click",function(event){
+             $("#loginModal").modal('show');
+        });
+
+   $("#cross").on('click',function(event){
+          event.preventDefault();
+          $(".ecommerce_heading").removeClass("active");
+          $("#search").removeClass("active");
+   });
+
+    $("#search_btn").on('click',function(event){
+          event.preventDefault();
+          $(".ecommerce_heading").toggleClass("active");
+          $("#search").toggleClass("active");
+    });
+
+
+      $("#search_id").on("input",function(event){
+         var info=$(this).val();
+          $.ajax({
+             url:"php/main.php",
+             type:"post",
+             data:{info:info},
+             success:function(data_store){
+               $('.item-container').html(data_store);
+             }
+          });
+      });
+
+
+
+
+        $("#cookies_btn").on("click",function(event){
+              event.preventDefault();
+              $('.cookies').css('display','none');
+        });
+
+          setTimeout(function() {
+          	  $('.cookies').css('display','none');
+          }, 6000);
+
+    	
+    	   $(document).ready(function(e){
+      
+              
+
+                 $.ajax({
+                 	 url:"php/store.php",
+                 	 success:function(data_store){
+                      
+                 		$('.item-container').html(data_store);
+
+                 	 }
+                 });
+                 
+
+    	   });
+    </script>
+
+
+    <script type='text/javascript'>
+    	   
+         $(document).on('click', '.shopping-cart', function(event) {
+                                
+          var middle=[];
+
+
+          var image=$(this)
+          .parent()
+          .parent()
+          .siblings()
+          .attr("src");
+
+           
+          var title=$(this).parent().parent().parent().siblings().children('.card-title').text();
+
+          var company=$(this).parent().parent().parent().siblings().children('.footer-content').children(".footer-data").children().text();
+
+          var data=$(this).parent().parent().parent().siblings().children('.middle-content').children();
+
+             data.each( function(index,element) {
+             	 
+             	var detail=$(this).children().text();
+             	middle.push(detail);
+
+             });
+
+           }); 
+
+    </script>
+    <script type='text/javascript'>
+    	 
+    	 $('.bar').on('click',function(e){
+    	 	 $('#sidebar').addClass('active');
+    	 	  $('.overlay').addClass('active');
+    	 });
+
+    	 $('#dismiss,.overlay').on('click',function(e){
+    	 	  $('#sidebar').removeClass('active');
+    	 	  $('.overlay').removeClass('active');
+    	 });
+
+    	 $('.showMore').on('click',function(e){
+
+           $(this).parent().children().css('display','inline-block');
+           $(this).css('display','none');
+         
+
+    	 });
+
+    </script>
+
+ 	 </body>
+ </html>

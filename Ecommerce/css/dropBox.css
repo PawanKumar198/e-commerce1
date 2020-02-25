@@ -1,0 +1,77 @@
+    
+  *, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.animenu__nav > li > a {
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+.animenu__nav > li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+
+}
+
+.drop_list .hidden{
+  display: none;
+}
+
+
+.showMore{
+  cursor: pointer;
+  display: block;
+}
+
+
+.animenu__nav > li:focus-within > ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+}
+
+
+.animenu__nav__dropdown {
+  
+  position: absolute;
+  top: 130%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  list-style: none;
+  visibility: hidden;
+  margin: 20px 0 0 0;
+  box-shadow: 1px 1px 3px 3px rgba(0,0,0,.3);
+  background:#fff;
+  transition: all 0.5s ease;
+
+}
+
+.animenu__nav__dropdown a{
+
+  border-radius:50px;
+  
+}
+
+.animenu__nav__dropdown > li {
+  width: 100%;
+  margin-top:10px;
+  
+}
+.animenu__nav__dropdown > li:first-child > a:after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 3em;
+  top: 0px;
+  border: 13px solid transparent;
+  border-top: 0;
+  border-bottom-color: #000;
+
+}
+
+.animenu__nav__dropdown li :hover{
+  color:#fff;
+}
